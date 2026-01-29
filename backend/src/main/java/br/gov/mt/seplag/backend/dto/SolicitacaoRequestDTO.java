@@ -5,8 +5,8 @@ import jakarta.validation.constraints.Size;
 
 public class SolicitacaoRequestDTO {
 
-    @NotBlank
-    @Size(max = 255)
+    @NotBlank(message = "Descrição é obrigatória")
+    @Size(max = 255, message = "Descrição deve ter no máximo 255 caracteres")
     private String descricao;
 
     public String getDescricao() {
