@@ -27,7 +27,7 @@ public class SolicitacaoService {
 
     public Solicitacao buscarPorId(Long id) {
         return solicitacaoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Solicitação não encontrada"));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Solicitação não encontrada"));
     }
 
     public Solicitacao atualizarStatus(Long id, StatusSolicitacao novoStatus) {
