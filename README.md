@@ -1,6 +1,6 @@
 # Projeto Backend - Eng. Senior – Processo Seletivo SEPLAG/MT 001/2026
 
-Projeto Full Stack desenvolvido como parte do **Processo Seletivo Simplificado Conjunto nº 001/2026**, do **Governo do Estado de Mato Grosso (SEPLAG/MT)**, para o cargo de **Analista de Tecnologia da Informação – Perfil Engenheiro da Computação (Sênior)**.
+Projeto Backend desenvolvido como parte do **Processo Seletivo Simplificado Conjunto nº 001/2026**, do **Governo do Estado de Mato Grosso (SEPLAG/MT)**, para o cargo de **Analista de Tecnologia da Informação – Perfil Engenheiro da Computação (Sênior)**.
 
 A aplicação demonstra a construção de uma solução **full stack moderna**, com foco em **boas práticas de engenharia de software**, **arquitetura limpa**, **segurança**, **documentação**, **containerização** e **clareza técnica**, conforme os requisitos definidos no edital.
 
