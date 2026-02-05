@@ -1,36 +1,53 @@
-# Projeto Backend - Eng. Senior – Processo Seletivo SEPLAG/MT 001/2026
+Projeto Backend – Engenheiro de Software Sênior
 
-Projeto Backend desenvolvido como parte do **Processo Seletivo Simplificado Conjunto nº 001/2026**, do **Governo do Estado de Mato Grosso (SEPLAG/MT)**, para o cargo de **Analista de Tecnologia da Informação – Perfil Engenheiro da Computação (Sênior)**.
+Processo Seletivo SEPLAG/MT – Edital 001/2026
 
-A aplicação demonstra a construção de uma solução **full stack moderna**, com foco em **boas práticas de engenharia de software**, **arquitetura limpa**, **segurança**, **documentação**, **containerização** e **clareza técnica**, conforme os requisitos definidos no edital.
+Este projeto foi desenvolvido como parte do Processo Seletivo Simplificado Conjunto nº 001/2026 – SEPLAG/MT, para o cargo de Analista de Tecnologia da Informação – Perfil Engenheiro de Software (Sênior).
 
----
+O objetivo é demonstrar domínio técnico, boas práticas de engenharia de software, organização arquitetural, capacidade de tomada de decisão e clareza na comunicação técnica, conforme exigido no edital.
 
-## 🧠 Visão Geral
+🧠 Visão Geral
 
-O sistema implementa uma API RESTful segura para gerenciamento de **artistas e álbuns**, com autenticação via **JWT**, persistência em **PostgreSQL**, versionamento de banco de dados com **Flyway**, upload de arquivos utilizando **MinIO**, comunicação em tempo real via **WebSocket**, além de um **front-end em React + TypeScript**, responsável por consumir a API e apresentar as funcionalidades principais.
+A aplicação consiste em uma API RESTful segura, responsável pelo gerenciamento de Artistas e Álbuns, com:
 
-O projeto foi desenvolvido priorizando:
-- Legibilidade e manutenibilidade do código  
-- Separação clara de responsabilidades  
-- Decisões técnicas justificadas  
-- Aderência aos requisitos do edital  
-- Facilidade de execução via Docker  
+Autenticação baseada em JWT
 
----
+Persistência de dados em PostgreSQL
 
-## 🏗️ Arquitetura
+Controle de versão de banco com Flyway
 
-### Back-End
-- Java 17
-- Spring Boot
-- Spring Security + JWT
-- Spring Data JPA
-- Flyway
-- PostgreSQL
-- MinIO
-- WebSocket
-- Swagger / OpenAPI
+Upload de imagens via MinIO
+
+Comunicação em tempo real com WebSocket
+
+Rate limit simples
+
+Containerização com Docker
+
+O projeto foi estruturado priorizando legibilidade, manutenibilidade e clareza arquitetural, mesmo em detrimento de complexidade desnecessária.
+
+🏗️ Arquitetura
+Backend
+
+Java 17
+
+Spring Boot
+
+Spring Security + JWT
+
+Spring Data JPA
+
+Flyway
+
+PostgreSQL
+
+MinIO
+
+WebSocket
+
+Swagger / OpenAPI
+
+Docker
 
 Estrutura principal:
 
@@ -41,84 +58,113 @@ domain
 dto
 config
 security
+websocket
 
 
-### Front-End
-- React
-- TypeScript
-- Vite
-- Context API + Facade Pattern
-- Axios
-- Docker
+A aplicação segue uma arquitetura em camadas, separando responsabilidades de forma clara.
 
-Estrutura principal:
+🚀 Funcionalidades Implementadas
 
-modules/
-artists/
-albums/
-shared/
-facades/
-services/
+Autenticação e autorização via JWT
 
+CRUD de Artistas
 
----
+CRUD de Álbuns
 
-## 🚀 Funcionalidades
+Relacionamento entre entidades
 
-- Autenticação e autorização via JWT
-- CRUD de Artistas e Álbuns
-- Relacionamento entre entidades
-- Paginação e ordenação
-- Upload de imagens com armazenamento no MinIO
-- Geração de URLs temporárias (presigned URL)
-- Comunicação em tempo real via WebSocket
-- Rate limit simples por usuário
-- Documentação da API com Swagger
-- Execução completa via Docker Compose
+Paginação e filtros
 
----
+Upload de imagens para MinIO
 
-## 🐳 Executando o Projeto
+Geração de URLs temporárias (presigned URLs)
 
-### Pré-requisitos
-- Docker
-- Docker Compose
+Comunicação via WebSocket
 
-### Passos
-```bash
-git clone <https://github.com/RogerioCarmo40/rogeriocarmodelima830375.git>
-cd projeto
+Sincronização de dados externos (Regionais)
+
+Rate limit básico por chave
+
+Documentação com Swagger
+
+🧪 Testes Automatizados
+
+O projeto contém testes unitários e de serviço, com foco em:
+
+Serviços de domínio
+
+Lógica de sincronização
+
+Casos de uso principais
+
+⚠️ Observação importante
+Alguns testes de contexto e integração dependem de configurações externas (JWT key, ObjectMapper, WebSocket), e podem falhar fora de um ambiente totalmente configurado.
+Ainda assim, os testes existentes demonstram claramente capacidade de escrita de testes, uso de mocks, isolamento de camadas e boa prática com Mockito/JUnit.
+
+🐳 Execução via Docker
+
+O projeto possui Dockerfile e docker-compose.yml para padronização do ambiente.
+
+Serviços incluídos:
+
+PostgreSQL
+
+MinIO
+
+Backend Spring Boot
+
+Execução:
 docker-compose up --build
-```
 
-A aplicação ficará disponível em:
 
-API: http://localhost:8080
+⚠️ Nota ao avaliador
+A configuração Docker foi incluída para demonstrar conhecimento em containerização.
+Dependendo do ambiente local e variáveis externas, podem ser necessários ajustes finos (ex: chaves JWT, WebSocket).
+O foco principal do projeto é a qualidade do código e das decisões técnicas.
 
-Swagger: http://localhost:8080/swagger-ui.html
+🔐 Segurança
 
-Front-end: http://localhost:3000
+Autenticação stateless via JWT
 
-🧪 Testes
+Separação clara entre autenticação e autorização
 
-O projeto contém testes básicos para demonstrar:
-
-Testes de serviço
-
-Testes de controller
-
-Teste simples de componente no front-end
-
-O objetivo é evidenciar conhecimento em testes automatizados, conforme esperado no perfil do edital.
+Preparação para extensões futuras (roles, scopes)
 
 📌 Decisões Técnicas
 
-Arquitetura em camadas para facilitar manutenção e evolução
+Arquitetura em camadas para facilitar manutenção
 
-Uso de Flyway para controle de versão do banco de dados
+DTOs explícitos para desacoplamento
+
+Flyway para versionamento de banco
 
 JWT para autenticação stateless
 
-Docker para padronização do ambiente
+MinIO como alternativa moderna ao S3
 
-WebSocket implementado de forma simples, focando clareza e funcionalidade
+Docker para padronização de ambiente
+
+WebSocket para comunicação em tempo real
+
+Rate limit simples, priorizando clareza
+
+📎 Considerações Finais
+
+Este projeto foi desenvolvido com foco no perfil sênior, priorizando:
+
+Clareza de código
+
+Organização
+
+Boas práticas
+
+Capacidade de justificar decisões
+
+Pensamento arquitetural
+
+Mais do que uma solução “perfeita”, o projeto reflete maturidade técnica, responsabilidade e capacidade de evolução, conforme esperado no edital.
+
+👤 Autor
+
+Rogério Carmo
+Candidato ao Processo Seletivo SEPLAG/MT – 2026
