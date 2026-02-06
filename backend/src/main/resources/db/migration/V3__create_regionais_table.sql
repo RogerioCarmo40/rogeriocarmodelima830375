@@ -1,0 +1,2 @@
+-- Tabela já criada na V1, esta migration apenas garante a estrutura
+-- O sincronismo será feito via API externa
