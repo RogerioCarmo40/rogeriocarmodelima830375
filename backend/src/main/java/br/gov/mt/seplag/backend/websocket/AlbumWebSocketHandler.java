@@ -1,6 +1,5 @@
 package br.gov.mt.seplag.backend.websocket;
 
-import br.gov.mt.seplag.backend.domain.websocket.AlbumNotification;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
