@@ -1,6 +1,8 @@
 package br.gov.mt.seplag.backend.websocket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import br.gov.mt.seplag.backend.domain.websocket.AlbumNotification;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
