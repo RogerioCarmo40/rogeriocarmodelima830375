@@ -1,4 +1,4 @@
-package br.gov.mt.seplag.backend.dto;
+package br.gov.mt.seplag.backend.domain.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

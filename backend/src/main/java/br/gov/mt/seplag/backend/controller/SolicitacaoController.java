@@ -1,7 +1,7 @@
 package br.gov.mt.seplag.backend.controller;
 
+import br.gov.mt.seplag.backend.domain.dto.*;
 import br.gov.mt.seplag.backend.domain.entity.Solicitacao;
-import br.gov.mt.seplag.backend.dto.*;
 import br.gov.mt.seplag.backend.service.SolicitacaoService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package br.gov.mt.seplag.backend.dto;
+package br.gov.mt.seplag.backend.domain.dto;
 
 import br.gov.mt.seplag.backend.domain.enums.StatusSolicitacao;
 import jakarta.validation.constraints.NotNull;

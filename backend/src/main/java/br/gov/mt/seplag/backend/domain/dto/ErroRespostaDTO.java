@@ -1,4 +1,4 @@
-package br.gov.mt.seplag.backend.dto;
+package br.gov.mt.seplag.backend.domain.dto;
 
 import java.time.LocalDateTime;
 
